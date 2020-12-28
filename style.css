@@ -70,6 +70,7 @@ header .navigation{
   display: flex;
   background-color: var(--secondaryColor);
   align-items: center;
+  flex-wrap: wrap;
 }
 header .logo{
   color: var(--primaryColor);
@@ -364,6 +365,7 @@ footer a:hover{
   background-color: var(--secondaryColor);
   font-size: 1.2rem;
   margin: 35px 0 0 35px;
+  width: -moz-fit-content;
   width: fit-content;
   border: 1px solid var(--primaryColor);
   padding: 10px;
@@ -400,6 +402,7 @@ footer a:hover{
   color: var(--primaryColor);
   line-height: 2;
   font-size: 1.1rem;
+  padding: 0 0 0 5px;
 }
 .blog .widget a:hover{
   background-color: var(--primaryColor);
@@ -407,3 +410,67 @@ footer a:hover{
   color: var(--white);
   display: inline;
 }
+
+/* * * * * * * * * * * * * * * * * Responsive * * * * * * * * * * * * * * * * */
+ @media(max-width: 768px){
+  header{
+    padding-top: 0;
+  }
+  header .container{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  header .logo {
+    padding: 21px 10px 20px 10px;
+}
+header li {
+    padding: 8px 10px;
+  }
+  header ul {
+    justify-content: center;
+}
+  header a{
+    width: 100%;
+  }
+  header h1{
+    font-size: 4rem;
+  }
+  header h4{
+    font-size: 1.2rem;
+  }
+  .tema p{
+    padding-bottom: 50px;
+  }
+  .tema i{
+    margin-bottom: 50px;
+  }
+  .tema h3{
+    text-align: center;
+  }
+  .tema .row{
+    justify-content: center;
+  }
+  .poziv h2{
+    text-align: center;
+  }
+  .blog .row{
+    flex-direction: column-reverse;
+  }
+  .blog .column:last-child {
+    position: initial;
+}
+.blog .foto {
+    margin: 0;
+}
+.blog .article {
+    position: initial;
+    margin: 50px 0;
+}
+  }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .tema .row .column:nth-child(1) {
+        padding-right: 50px;
+      }
+  }
